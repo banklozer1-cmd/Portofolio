@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portofolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= CYBER THEME LOADING SCREEN ================= -->
+    <div id="loadingScreen" class="loading-screen" aria-live="polite">
+        <!-- Ambient Glowing Aura -->
+        <div class="loader-bg-glow"></div>
+        <div class="loader-grid-pattern"></div>
+
+        <div class="loader-content">
+            <!-- Concentric Hexagon Cyber Rings (Sesuai Konsep Hexagon Hero) -->
+            <div class="loader-hexagon-wrapper">
+                <div class="loader-hex-glow"></div>
+                <svg class="loader-hex-svg" viewBox="0 0 140 140" width="130" height="130">
+                    <defs>
+                        <linearGradient id="hexGradOuter" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#38bdf8" />
+                            <stop offset="50%" stop-color="#3b82f6" />
+                            <stop offset="100%" stop-color="#1d4ed8" />
+                        </linearGradient>
+                        <linearGradient id="hexGradInner" x1="100%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#60a5fa" />
+                            <stop offset="100%" stop-color="#0284c7" />
+                        </linearGradient>
+                    </defs>
+
+                    <!-- Outer Hexagon Ring (Rotating Clockwise) -->
+                    <polygon class="hex-poly hex-outer" points="70,5 125,35 125,105 70,135 15,105 15,35" />
+
+                    <!-- Inner Hexagon Ring (Rotating Counter-Clockwise) -->
+                    <polygon class="hex-poly hex-inner" points="70,22 110,44 110,96 70,118 30,96 30,44" />
+
+                    <!-- Corner Accent Orbit Dots -->
+                    <circle class="hex-dot dot-1" cx="70" cy="5" r="3.2" />
+                    <circle class="hex-dot dot-2" cx="125" cy="35" r="3.2" />
+                    <circle class="hex-dot dot-3" cx="125" cy="105" r="3.2" />
+                    <circle class="hex-dot dot-4" cx="70" cy="135" r="3.2" />
+                    <circle class="hex-dot dot-5" cx="15" cy="105" r="3.2" />
+                    <circle class="hex-dot dot-6" cx="15" cy="35" r="3.2" />
+                </svg>
+
+                <!-- Monogram / Center Code Badge -->
+                <div class="loader-hexagon-center">
+                    <span class="loader-monogram">&lt;D/G&gt;</span>
+                </div>
+            </div>
+
+            <!-- Identitas & Nama Profil -->
+            <div class="loader-text-wrap">
+                <span class="loader-sys-tag">SYSTEM INITIALIZATION</span>
+                <h2 class="loader-name">DAFA AHMAD NAUFAL GOMAN</h2>
+                <div class="loader-status-badge">
+                    <span class="loader-status-dot"></span>
+                    <span id="loaderStatusText" class="loader-status-text">Memulai antarmuka sistem...</span>
+                </div>
+            </div>
+
+            <!-- Progress Bar & Counter -->
+            <div class="loader-progress-box">
+                <div class="loader-bar-track">
+                    <div id="loaderProgressBar" class="loader-bar-fill">
+                        <span class="loader-bar-light-head"></span>
+                    </div>
+                </div>
+                <div class="loader-info-row">
+                    <span class="loader-exp-text">PORTFOLIO EXPERIENCE</span>
+                    <span id="loaderPercentage" class="loader-percentage">0%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= CYBER DARK-NAVY BACKGROUND LAYER ================= -->
+    <div class="cyber-bg-wrapper" aria-hidden="true">
+        <div class="cyber-grid-overlay"></div>
+        <div class="cyber-orb orb-1"></div>
+        <div class="cyber-orb orb-2"></div>
+        <div class="cyber-orb orb-3"></div>
+        <div class="cyber-orb orb-4"></div>
+        <div class="cyber-light-beam beam-top"></div>
+        <div class="cyber-dust-layer"></div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="navbar-container">
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-item active">HOME</a></li>
+                <li><a href="#about" class="nav-item">ABOUT</a></li>
+                <li><a href="#portofolio" class="nav-item">PORTOFOLIO</a></li>
+                <li><a href="#contact" class="nav-item">CONTACT</a></li>
+            </ul>
+            <div class="nav-divider"></div>
+            <button class="audio-btn" aria-label="Toggle Audio" title="Buka Playlist Musik Spotify">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Konten Utama (Hero Section) -->
+    <main class="hero-section" id="home">
+        <div class="hero-left">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span>Junior Developer & Web Creator</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="blue-text">WELCOME</span> <span class="blue-text">TO</span><br>
+                <span class="white-text">MY</span> <span class="white-text">PORTOFOLIO</span>
+            </h1>
+
+            <p class="hero-description">
+                Berawal dari rasa penasaran, sekarang menjadi rasa suka. Saya suka dengan pelajaran web atau kode.
+                Karena dengan pelajaran itu saya dapat menciptakan web ini dan membuka skill baru untuk diri saya.
+            </p>
+
+            <div class="cta-buttons">
+                <a href="#portofolio" class="btn-pill btn-primary-cta">
+                    <span>Lihat Projek</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="13 17 18 12 13 7"></polyline>
+                        <polyline points="6 17 11 12 6 7"></polyline>
+                    </svg>
+                </a>
+
+                <a href="#contact" class="btn-pill btn-secondary-cta">
+                    <span>Contact Me</span>
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.8"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="social-links">
+                <a href="https://www.instagram.com/dfaaaajaaa/" target="_blank" rel="noopener noreferrer"
+                    class="social-circle" aria-label="Instagram">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+
+                <a href="https://www.tiktok.com/@ituaoranga" target="_blank" rel="noopener noreferrer"
+                    class="social-circle" aria-label="TikTok">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="#ffffff">
+                        <path
+                            d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <div class="hexagon-wrapper">
+                <div class="hexagon-glow"></div>
+                <div class="hexagon-bg"></div>
+                <div class="photo-mask">
+                    <img src="home.png" alt="Foto Profil" class="profile-img">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ================= ABOUT ME SECTION ================= -->
+    <section class="about-section" id="about">
+        <!-- Judul Bagian -->
+        <div class="section-heading-container">
+            <span class="section-badge">TENTANG SAYA</span>
+            <h2 class="section-title">ABOUT ME</h2>
+            <div class="title-underline"></div>
+        </div>
+
+        <!-- Baris 1: Intro Profil Dafa (Gambar 1) -->
+        <div class="about-hero-grid">
+            <!-- Kolom Kiri -->
+            <div class="about-left-col">
+                <span class="about-greeting">HAI, I’M</span>
+                <h3 class="about-name">DAFA AHMAD<br>NAUFAL GOMAN</h3>
+                <a href="#contact" class="btn-pill btn-about">
+                    <span>Hubungi saya</span>
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Kolom Tengah: Foto Dafa (home.png) -->
+            <div class="about-center-col">
+                <div class="about-photo-card">
+                    <img src="home.png" alt="Dafa Ahmad Naufal Goman" class="about-profile-img">
+                </div>
+            </div>
+
+            <!-- Kolom Kanan: Deskripsi Dafa -->
+            <div class="about-right-col">
+                <p class="about-text">
+                    Saya adalah seorang <strong>Junior Developer</strong> yang befokus pada pengembangan teknologi yang
+                    fungsional dan sekaligus menarik. Saya sanagat senang memadukan kode, dan desain dalam membentuk
+                    atau membangun produk digital yang menarik dan berkesan
+                </p>
+                <p class="about-text">
+                    Dengan canva,vs code, dan web moderen saya dapat menciptakan suatu produk yang berkesan, modern dan
+                    berguna mengunakan ide” saya
+                </p>
+                <a href="#portofolio" class="btn-pill btn-about">
+                    <span>Lihat Projek</span>
+                    <span class="code-bracket">&lt; &gt;</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Baris 2: Education & Experience (Gambar 2) -->
+        <div class="edu-exp-section">
+            <!-- Kolom Education -->
+            <div class="edu-col">
+                <h3 class="group-title">EDUCATION</h3>
+                <div class="cards-list">
+                    <!-- SMP -->
+                    <div class="info-card">
+                        <div class="card-logo-wrap">
+                            <img src="smp.png" alt="Logo SMPN 1 Makassar" class="card-logo">
+                        </div>
+                        <div class="card-details">
+                            <h4 class="card-school">SMPN 1 MAKASSAR</h4>
+                            <span class="card-subtitle">SEKOLAH MENENGAH PERTAMA</span>
+                            <span class="card-time">2020-2023</span>
+                        </div>
+                    </div>
+
+                    <!-- SMA -->
+                    <div class="info-card">
+                        <div class="card-logo-wrap">
+                            <img src="sma.png" alt="Logo SMAN 8 Makassar" class="card-logo">
+                        </div>
+                        <div class="card-details">
+                            <h4 class="card-school">SMAN 8 MAKASSAR</h4>
+                            <span class="card-subtitle">SEKOLAH MENENGAH ATAS</span>
+                            <span class="card-time">2023-2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kolom Experience -->
+            <div class="exp-col">
+                <h3 class="group-title">EXPERIANCE</h3>
+                <div class="cards-list">
+                    <!-- Universitas Dipa -->
+                    <div class="info-card">
+                        <div class="card-logo-wrap">
+                            <img src="dipa.png" alt="Logo Universitas Dipa" class="card-logo">
+                        </div>
+                        <div class="card-details">
+                            <h4 class="card-school">UNIVERSITAS DIPA</h4>
+                            <span class="card-subtitle">PENDIDIKAN TINGGI & TEKNOLOGI</span>
+                            <span class="card-time">MAHASISWA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Baris 3: Tiga Kartu (Projects, Certificates, Awards) -->
+        <div class="three-cards-grid">
+            <!-- Kolom 1: Projects -->
+            <div class="feature-box feature-box-clickable" id="about-projects-card"
+                title="Klik untuk membuka Projects di Portfolio">
+                <div class="feature-icon-box">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#6ea2f5" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                        <path d="m10 9-2 2 2 2"></path>
+                        <path d="m14 9 2 2-2 2"></path>
+                    </svg>
+                </div>
+                <div class="feature-title-wrap">
+                    <h4 class="feature-title">Projects</h4>
+                    <span class="click-indicator">Buka &rarr;</span>
+                </div>
+                <p class="feature-desc">Hasil karya yang saya hasilkan</p>
+            </div>
+
+            <!-- Kolom 2: Certificates (Tersambung langsung ke Portfolio Certificates) -->
+            <div class="feature-box feature-box-clickable" id="about-cert-card"
+                title="Klik untuk membuka Certificates di Portfolio">
+                <div class="feature-icon-box">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#6ea2f5" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="8" r="6"></circle>
+                        <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+                    </svg>
+                </div>
+                <div class="feature-title-wrap">
+                    <h4 class="feature-title">Certificates</h4>
+                    <span class="click-indicator">Buka &rarr;</span>
+                </div>
+                <p class="feature-desc">Penghargaan yang saya dapatkan</p>
+            </div>
+
+            <!-- Kolom 3: Awards -->
+            <div class="feature-box feature-box-clickable" id="about-awards-card"
+                title="Klik untuk membuka Achievements di Portfolio">
+                <div class="feature-icon-box">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#6ea2f5" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                        <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                        <path d="M4 22h16"></path>
+                        <path d="M10 14.66V17c0 .55-.45 1-1 1H7"></path>
+                        <path d="M14 14.66V17c0 .55.45 1 1 1h2"></path>
+                        <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+                    </svg>
+                </div>
+                <div class="feature-title-wrap">
+                    <h4 class="feature-title">Awards</h4>
+                    <span class="click-indicator">Buka &rarr;</span>
+                </div>
+                <p class="feature-desc">Pencapaian</p>
+            </div>
+        </div>
+
+        <!-- Baris 4: Little Music Showcase (Gambar 4 & Playlist Spotify) -->
+        <div class="music-card-wrapper" id="music-section">
+            <div class="music-info-side">
+                <h3 class="music-big-title">
+                    <span class="music-title-line-1">WITH A LITTLE MUSIC. CREATING</span>
+                    <span class="music-title-line-2">A WEALTH OF WORKS</span>
+                </h3>
+                <p class="music-tagline">
+                    Dengan sedikit musik kita dapat menciptakan berbagai karya dengan happy dan tenang
+                </p>
+                <a href="https://open.spotify.com/playlist/254AngTN6E87YnlIL4UziG" target="_blank"
+                    rel="noopener noreferrer" class="btn-pill btn-spotify">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424c-.18.295-.563.387-.857.207-2.35-1.436-5.308-1.76-8.792-.963-.335.077-.67-.133-.746-.468-.077-.334.132-.67.467-.746 3.808-.87 7.076-.502 9.721 1.113.294.18.386.563.207.857zm1.225-2.724c-.226.368-.71.482-1.078.256-2.69-1.654-6.79-2.133-9.97-1.167-.413.125-.85-.11-1-.523-.15-.413.084-.85.497-.975 3.633-1.103 8.163-.574 11.23 1.314.367.226.481.71.256 1.078zm.106-2.836c-3.226-1.916-8.544-2.092-11.62-.855-.494.198-1.047-.047-1.245-.54-.198-.495.047-1.048.54-1.246 3.565-1.433 9.444-1.226 13.161.98.444.263.59.837.327 1.28-.263.444-.837.59-1.28.327z" />
+                    </svg>
+                    <span>Daily Rotation di Spotify</span>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                        <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="music-iframe-side">
+                <iframe data-testid="embed-iframe" style="border-radius:12px"
+                    src="https://open.spotify.com/embed/playlist/254AngTN6E87YnlIL4UziG?utm_source=generator&theme=0&si=7eff817ae4be4a2a"
+                    width="100%" height="352" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PORTOFOLIO SECTION (TABS & CERTIFICATES) ================= -->
+    <section class="portfolio-section" id="portofolio">
+        <!-- Judul Bagian -->
+        <div class="section-heading-container">
+            <span class="section-badge">MY SHOWCASE</span>
+            <h2 class="section-title portfolio-art-title">Portofolio</h2>
+            <div class="title-underline"></div>
+        </div>
+
+        <!-- Filter Tab Buttons (Sesuai Gambar Referensi) -->
+        <div class="portfolio-tabs-container">
+            <div class="portfolio-tabs-wrapper">
+                <button class="portfolio-tab-btn" data-tab="projects" id="tab-btn-projects">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                    <span>Projects</span>
+                </button>
+
+                <button class="portfolio-tab-btn active" data-tab="certificates" id="tab-btn-certificates">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="8" r="6"></circle>
+                        <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+                    </svg>
+                    <span>Certificates</span>
+                </button>
+
+                <button class="portfolio-tab-btn" data-tab="achievements" id="tab-btn-achievements">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                        <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                        <path d="M4 22h16"></path>
+                        <path d="M10 14.66V17c0 .55-.45 1-1 1H7"></path>
+                        <path d="M14 14.66V17c0 .55.45 1 1 1h2"></path>
+                        <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+                    </svg>
+                    <span>Achievements</span>
+                </button>
+
+                <button class="portfolio-tab-btn" data-tab="techstack" id="tab-btn-techstack">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                        <rect x="9" y="9" width="6" height="6"></rect>
+                        <line x1="9" y1="1" x2="9" y2="4"></line>
+                        <line x1="15" y1="1" x2="15" y2="4"></line>
+                        <line x1="9" y1="20" x2="9" y2="23"></line>
+                        <line x1="15" y1="20" x2="15" y2="23"></line>
+                        <line x1="20" y1="9" x2="23" y2="9"></line>
+                        <line x1="20" y1="14" x2="23" y2="14"></line>
+                        <line x1="1" y1="9" x2="4" y2="9"></line>
+                        <line x1="1" y1="14" x2="4" y2="14"></line>
+                    </svg>
+                    <span>Tech Stack</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Tab Contents Wrapper -->
+        <div class="portfolio-tab-content-wrapper">
+            <!-- 1. CERTIFICATES PANEL (Default Active, Memuat sertifikat1.png milik user) -->
+            <div class="portfolio-tab-panel active" id="panel-certificates">
+                <div class="certificates-grid">
+                    <!-- Kartu Sertifikat 1: sertifikat1.png Milik Pengguna Sendiri -->
+                    <div class="cert-card"
+                        onclick="openCertModal('sertifikat1.png', 'Sertifikat Dafa Ahmad Naufal Goman')">
+                        <div class="cert-img-wrapper">
+                            <img src="sertifikat1.png" alt="Sertifikat Dafa Ahmad Naufal Goman" class="cert-img">
+                            <div class="cert-overlay">
+                                <span class="cert-view-btn">
+                                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                    </svg>
+                                    Perbesar
+                                </span>
+                            </div>
+                        </div>
+                        <div class="cert-caption">
+                            <h4 class="cert-title">Sertifikat Resmi</h4>
+                            <p class="cert-meta">Dafa Ahmad Naufal Goman &bull; Terverifikasi</p>
+                        </div>
+                    </div>
+
+                    <!-- Kartu Sertifikat 3: Ethically Hack the Planet Part 2 (Udemy Style Sesuai Gambar) -->
+                    <div class="cert-card cert-styled-card"
+                        onclick="openCertDemoModal('Ethically Hack the Planet Part 2', 'Udemy Certificate of Completion', 'Dafa Ahmad Naufal Goman', 'Cyber Security & Network')">
+                        <div class="cert-styled-inner">
+                            <div class="cert-styled-header">
+                                <span class="brand-udemy">ûdemy</span>
+                                <span class="cert-styled-label">SERTIFIKAT PENYELESAIAN</span>
+                            </div>
+                            <div class="cert-styled-body">
+                                <h3 class="cert-styled-course">Ethically Hack the Planet Part 2</h3>
+                                <p class="cert-styled-by">Instructor: Cyber Tunnels, Zeronbyte Security</p>
+                            </div>
+                            <div class="cert-styled-footer">
+                                <span class="cert-styled-student">Muhammad Al-Fari Yusuf</span>
+                                <span class="cert-styled-verified">&#10003; Verified</span>
+                            </div>
+                        </div>
+                        <div class="cert-caption">
+                            <h4 class="cert-title">Ethically Hack the Planet</h4>
+                            <p class="cert-meta">Udemy &bull; Cyber Security</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. PROJECTS PANEL -->
+            <div class="portfolio-tab-panel" id="panel-projects">
+                <div class="portfolio-projects-grid">
+                    <div class="project-box">
+                        <div class="project-header">
+                            <span class="project-category">Web Development</span>
+                        </div>
+                        <h4 class="project-name">Personal Portfolio Website</h4>
+                        <p class="project-summary">Website portofolio interaktif dan responsif berdesain
+                            dark-blue
+                            modern dengan audio showcase Spotify, heksagon hero, dan tab navigasi interaktif.
+                        </p>
+                        <div class="project-badges">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+
+                    <div class="project-box">
+                        <div class="project-header">
+                            <span class="project-category">UI / UX Design</span>
+                        </div>
+                        <h4 class="project-name">Creative Graphic & Mockup</h4>
+                        <p class="project-summary">Menciptakan desain visual, mockup antarmuka, dan konten
+                            presentasi
+                            digital yang berkesan menggunakan Canva dan tools desain modern.</p>
+                        <div class="project-badges">
+                            <span>Canva</span>
+                            <span>Visual Design</span>
+                            <span>UI Mockup</span>
+                        </div>
+                    </div>
+
+                    <div class="project-box">
+                        <div class="project-header">
+                            <span class="project-category upcoming">In Progress</span>
+                        </div>
+                        <h4 class="project-name">Next Web Innovation</h4>
+                        <p class="project-summary">Eksplorasi kode dan teknologi baru yang sedang dikembangkan
+                            untuk
+                            membangun aplikasi berbasis web yang fungsional dan inovatif.</p>
+                        <div class="project-badges">
+                            <span>VS Code</span>
+                            <span>Web Modern</span>
+                            <span>Interactive</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. ACHIEVEMENTS PANEL -->
+            <div class="portfolio-tab-panel" id="panel-achievements">
+                <div class="achieve-grid">
+                    <div class="achieve-box">
+                        <div class="achieve-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6ea2f5"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                                <path d="M4 22h16"></path>
+                                <path d="M10 14.66V17c0 .55-.45 1-1 1H7"></path>
+                                <path d="M14 14.66V17c0 .55.45 1 1 1h2"></path>
+                                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+                            </svg>
+                        </div>
+                        <h4>Prestasi Akademik & Teknologi</h4>
+                        <p>Pencapaian dedikasi dan eksplorasi di bidang teknologi dan pendidikan web
+                            development.</p>
+                    </div>
+
+                    <div class="achieve-box">
+                        <div class="achieve-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6ea2f5"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                        </div>
+                        <h4>Kreativitas & Desain Digital</h4>
+                        <p>Apresiasi atas kemampuan memadukan visual kreatif dan implementasi antarmuka digital
+                            yang
+                            menarik.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. TECH STACK PANEL (Sesuai Referensi Gambar) -->
+            <div class="portfolio-tab-panel" id="panel-techstack">
+                <div class="techstack-grid">
+
+                    <!-- 1. HTML5 -->
+                    <div class="tech-item tech-item-html5 active-glow" onclick="toggleTechGlow(this)"
+                        title="Klik untuk menyalakan/mematikan efek cahaya">
+                        <div class="tech-card-box">
+                            <div class="tech-glow-aura"></div>
+                            <div class="tech-corner-sheen"></div>
+                            <div class="tech-shine-sweep"></div>
+                            <div class="tech-icon-wrap">
+                                <svg class="tech-icon-svg" viewBox="0 0 512 512" width="56" height="56">
+                                    <path fill="#E34F26" d="M71 460L30 0h452l-41 460-185 52z" />
+                                    <path fill="#EF652A" d="M256 472l149-41 35-391H256v432z" />
+                                    <path fill="#ECECEC"
+                                        d="M256 176H147l-7-79h232l-7 79H256zm0 119h-53l-4-40h57v-79H133l11 119h112v-79zm0 107l-78-21-5-57h-79l9 108 153 42V402z" />
+                                    <path fill="#FFFFFF"
+                                        d="M256 176v-79h116l-7 79H256zm0 119v-79h111l-11 119-100 28v-72l47-13 4-43H256z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="tech-card-name">HTML5</span>
+                    </div>
+
+                    <!-- 2. CSS3 -->
+                    <div class="tech-item tech-item-css3 active-glow" onclick="toggleTechGlow(this)"
+                        title="Klik untuk menyalakan/mematikan efek cahaya">
+                        <div class="tech-card-box">
+                            <div class="tech-glow-aura"></div>
+                            <div class="tech-corner-sheen"></div>
+                            <div class="tech-shine-sweep"></div>
+                            <div class="tech-icon-wrap">
+                                <svg class="tech-icon-svg" viewBox="0 0 128 128" width="56" height="56">
+                                    <path fill="#1572B6"
+                                        d="M18.814 114.123L8.76 1.352h110.48l-10.064 112.754-45.243 12.543-45.119-12.526z" />
+                                    <path fill="#33A9DC"
+                                        d="M64.001 117.062l36.559-10.136 8.601-96.354h-45.16v106.49z" />
+                                    <path fill="#FFF"
+                                        d="M64.001 51.429h18.302l1.264-14.163H64.001V23.435h34.682l-.332 3.711-3.4 38.114h-30.95V51.429z" />
+                                    <path fill="#EBEBEB"
+                                        d="M64.083 87.349l-.061.018-15.403-4.159-.985-11.031H33.752l1.937 21.717 28.331 7.863.063-.018v-14.39z" />
+                                    <path fill="#FFF"
+                                        d="M81.127 64.675l-1.666 18.522-15.426 4.164v14.39l28.354-7.858.208-2.337 2.406-26.881H81.127z" />
+                                    <path fill="#EBEBEB"
+                                        d="M64.048 23.435v13.831H30.64l-.277-3.108-.63-7.012-.331-3.711h34.646zm-.047 27.996v13.831H48.792l-.277-3.108-.631-7.012-.33-3.711h16.447z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="tech-card-name">CSS3</span>
+                    </div>
+
+                    <!-- 3. JavaScript -->
+                    <div class="tech-item tech-item-javascript active-glow" onclick="toggleTechGlow(this)"
+                        title="Klik untuk menyalakan/mematikan efek cahaya">
+                        <div class="tech-card-box">
+                            <div class="tech-glow-aura"></div>
+                            <div class="tech-corner-sheen"></div>
+                            <div class="tech-shine-sweep"></div>
+                            <div class="tech-icon-wrap">
+                                <svg class="tech-icon-svg" viewBox="0 0 128 128" width="56" height="56">
+                                    <rect width="128" height="128" rx="14" fill="#F7DF1E" />
+                                    <path
+                                        d="M72.3 89.2c2.7 4.7 6.2 8.3 12.6 8.3 5.5 0 9-2.7 9-6.5 0-4.5-3.6-6.1-9.7-8.8l-3.3-1.4c-9.6-4.1-16-9.3-16-20.3 0-10.1 7.8-17.8 20-17.8 8.6 0 14.8 3.1 19.1 10.9l-9.1 5.8c-2.1-3.7-4.4-5.2-10-5.2-4.5 0-7.3 2.9-7.3 6.1 0 3.7 2.3 5.2 7.8 7.6l3.3 1.4c11.3 4.9 18.1 9.9 18.1 21.4 0 12.3-9.7 18.7-22.6 18.7-12.7 0-20.8-6-24.9-14.3l9-5.5zM29.5 90.7c2 3.6 4.9 6.2 9.9 6.2 5.1 0 8.3-2.3 8.3-11.4V43.8h13.2v41.9c0 16.1-9.5 23.3-22.1 23.3-10.4 0-16.7-5.1-20.2-12.8l10.9-5.5z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="tech-card-name">JavaScript</span>
+                    </div>
+
+                    <!-- 4. VS Code -->
+                    <div class="tech-item tech-item-vscode" onclick="toggleTechGlow(this)"
+                        title="Klik untuk menyalakan/mematikan efek cahaya">
+                        <div class="tech-card-box">
+                            <div class="tech-glow-aura"></div>
+                            <div class="tech-corner-sheen"></div>
+                            <div class="tech-shine-sweep"></div>
+                            <div class="tech-icon-wrap">
+                                <svg class="tech-icon-svg" viewBox="0 0 256 256" width="56" height="56">
+                                    <path fill="#0065A9"
+                                        d="M246.13 26.87L193.59 1.57C187.51-1.35 180.24-.12 175.47 4.65L3.47 161.48c-4.63 4.22-4.62 11.5 0 15.72l14.06 12.77c3.79 3.44 9.49 3.69 13.57 0.6l207.13-157.14c6.95-5.27 16.93-.31 16.93 8.42v-.61c0-6.12-3.5-11.71-9.02-14.36z" />
+                                    <path fill="#007ACC"
+                                        d="M193.48 1.57L74.86 96.35 31.08 63.12c-4.08-3.09-9.78-2.84-13.57 0.6L3.48 76.49c-4.63 4.21-4.63 11.5 0 15.72L41.43 126.84 3.48 161.48c-4.63 4.22-4.63 11.5 0 15.72l14.04 12.77c3.79 3.44 9.49 3.69 13.57 0.6l43.78-33.23 118.62 94.78c5.73 4.58 14.16 3.64 18.72-2.11l51.5-64.87c3.85-4.85 3.85-11.75 0-16.6l-51.5-64.87c-4.56-5.75-12.99-6.69-18.72-2.11z" />
+                                    <path fill="#1F9CF0"
+                                        d="M193.48 252.12l52.5-25.26c5.52-2.65 9.02-8.24 9.02-14.36V41.2c0-6.12-3.5-11.71-9.02-14.36l-52.5-25.26c-6.17-2.97-13.51-1.63-18.2 3.32L74.86 96.35l118.62 94.78 4.79 3.83c4.69 4.95 12.03 6.29 18.21 3.32z" />
+                                    <path fill="#FFF" d="M191.29 68.96L115.03 126.84l76.26 57.78V68.96z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="tech-card-name">VS Code</span>
+                    </div>
+
+                    <!-- 5. Canva -->
+                    <div class="tech-item tech-item-canva" onclick="toggleTechGlow(this)"
+                        title="Klik untuk menyalakan/mematikan efek cahaya">
+                        <div class="tech-card-box">
+                            <div class="tech-glow-aura"></div>
+                            <div class="tech-corner-sheen"></div>
+                            <div class="tech-shine-sweep"></div>
+                            <div class="tech-icon-wrap">
+                                <svg class="tech-icon-svg" viewBox="0 0 256 256" width="56" height="56">
+                                    <defs>
+                                        <linearGradient id="canvaCardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#00C4CC" />
+                                            <stop offset="50%" stop-color="#4666F6" />
+                                            <stop offset="100%" stop-color="#7D2AE8" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle cx="128" cy="128" r="128" fill="url(#canvaCardGrad)" />
+                                    <path fill="#FFFFFF"
+                                        d="M105.8 75.8c-10.8 0-20.4 3.9-28.6 11.8-8.2 7.9-13.5 17.9-16.1 30-2.6 12.1-1 24.1 2.7 35.6 3.7 11.5 9.6 20.7 17.7 27.7 8.1 7 17.7 10.4 29 10.4 11.9 0 22.6-3.7 32.1-11.3 9.5-7.6 17.6-18.4 24.5-32.8l-17.9-8.8c-5.2 10.6-11.5 18.4-19 23.5-7.5 5.1-15.6 7.6-24.3 7.6-7.5 0-14-2.2-19.5-6.6-5.5-4.4-9.6-10.5-12.5-18.3-2.8-7.8-3.9-16.3-3.1-25.6.7-9.3 3.5-17.5 8.2-24.6 4.7-7.1 11.1-10.6 19.2-10.6 7.4 0 13.8 2.4 19.2 7.3 5.4 4.9 9.6 11.8 12.6 20.6l18.5-7c-4.4-12.6-11-22.6-19.8-30-8.7-7.4-19.1-11.1-31.2-11.1z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="tech-card-name">Canva</span>
+                    </div>
+
+                    <!-- 6. Git -->
+                    <div class="tech-item tech-item-git" onclick="toggleTechGlow(this)"
+                        title="Klik untuk menyalakan/mematikan efek cahaya">
+                        <div class="tech-card-box">
+                            <div class="tech-glow-aura"></div>
+                            <div class="tech-corner-sheen"></div>
+                            <div class="tech-shine-sweep"></div>
+                            <div class="tech-icon-wrap">
+                                <svg class="tech-icon-svg" viewBox="0 0 128 128" width="56" height="56">
+                                    <path fill="#F05032"
+                                        d="M125.72 58.74L69.26 2.28a7.48 7.48 0 0 0-10.58 0L46.22 14.74l15.14 15.14a8.9 8.9 0 0 1 11.28 11.37l14.54 14.54a8.87 8.87 0 0 1 11.34 11.36l17.84-17.84a7.48 7.48 0 0 0 .04-10.57zm-20.08 29.5a8.88 8.88 0 0 1-11.32-2.78L79.8 100a8.9 8.9 0 1 1-6.72-2.82l-5.46-5.46a8.87 8.87 0 0 1-5.18 1.66 8.9 8.9 0 0 1-7.7-4.43L41.38 75.58a8.89 8.89 0 0 1-4.44 1.18 8.9 8.9 0 1 1 8.9-8.9c0 .7-.1 1.38-.28 2.03l13.1 13.1a8.88 8.88 0 0 1 6.84-1.12l6.24-6.24a8.9 8.9 0 0 1-1.28-7.78l-14.8-14.8-33.38 33.4a7.48 7.48 0 0 0 0 10.58l56.46 56.46a7.48 7.48 0 0 0 10.58 0l42.12-42.12a7.48 7.48 0 0 0 0-10.58l-10.1-10.05z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="tech-card-name">Git</span>
+                    </div>
+
+                    <!-- 7. GitHub -->
+                    <div class="tech-item tech-item-github" onclick="toggleTechGlow(this)"
+                        title="Klik untuk menyalakan/mematikan efek cahaya">
+                        <div class="tech-card-box">
+                            <div class="tech-glow-aura"></div>
+                            <div class="tech-corner-sheen"></div>
+                            <div class="tech-shine-sweep"></div>
+                            <div class="tech-icon-wrap">
+                                <svg class="tech-icon-svg" viewBox="0 0 128 128" width="56" height="56">
+                                    <path fill="#FFFFFF" fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M64 0C28.65 0 0 28.65 0 64c0 28.28 18.34 52.28 43.78 60.73 3.2.59 4.37-1.39 4.37-3.08 0-1.52-.06-5.55-.09-10.89-17.8 3.87-21.56-8.58-21.56-8.58-2.91-7.39-7.11-9.36-7.11-9.36-5.81-3.97.44-3.89.44-3.89 6.42.45 9.8 6.59 9.8 6.59 5.71 9.78 14.98 6.96 18.63 5.32.58-4.13 2.23-6.96 4.06-8.56-14.21-1.62-29.15-7.1-29.15-31.62 0-6.98 2.49-12.69 6.58-17.16-.66-1.62-2.85-8.12.62-16.92 0 0 5.37-1.72 17.6 6.56 5.1-1.42 10.57-2.13 16-2.15 5.43.02 10.9.73 16 2.15 12.22-8.28 17.58-6.56 17.58-6.56 3.48 8.8 1.29 15.3.63 16.92 4.1 4.47 6.57 10.18 6.57 17.16 0 24.59-14.97 29.98-29.23 31.57 2.3 1.98 4.35 5.89 4.35 11.87 0 8.57-.08 15.48-.08 17.58 0 1.71 1.15 3.71 4.41 3.08C109.68 116.25 128 92.27 128 64c0-35.35-28.65-64-64-64z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="tech-card-name">GitHub</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Lightbox untuk Melihat Sertifikat Penuh -->
+    <div id="certModal" class="cert-modal" onclick="closeCertModal(event)">
+        <div class="cert-modal-content" onclick="event.stopPropagation()">
+            <button class="cert-modal-close" onclick="closeCertModal(event)">&times;</button>
+            <div id="certModalBody">
+                <img id="certModalImg" src="" alt="Sertifikat Penuh" class="cert-modal-img">
+            </div>
+            <h4 id="certModalCaption" class="cert-modal-caption"></h4>
+        </div>
+    </div>
+
+    <!-- ================= CONTACT / HUBUNGI SAYA SECTION ================= -->
+    <section class="contact-section" id="contact">
+        <!-- Judul Bagian -->
+        <div class="section-heading-container">
+            <span class="section-badge">GET IN TOUCH</span>
+            <h2 class="section-title contact-art-title">Hubungi Saya</h2>
+            <div class="title-underline"></div>
+        </div>
+
+        <div class="contact-container">
+            <div class="contact-grid">
+
+                <!-- KOLOM KIRI: FORM HUBUNGI + FIND ME -->
+                <div class="contact-col-left">
+                    <!-- Kartu Form Hubungi -->
+                    <div class="contact-card hubungi-card">
+                        <h3 class="hubungi-card-title">Hubungi</h3>
+                        <p class="hubungi-card-subtitle">Anda butuh sesuatu??, Anda taukan harus kemana?...</p>
+
+                        <form id="contactForm" class="contact-form" onsubmit="handleContactSubmit(event)">
+                            <div class="form-group">
+                                <label for="contactName" class="form-label">Nama</label>
+                                <div class="input-with-icon">
+                                    <span class="input-icon">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="12" cy="7" r="4"></circle>
+                                        </svg>
+                                    </span>
+                                    <input type="text" id="contactName" name="contactName" class="contact-input"
+                                        placeholder="Nama Anda" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactEmail" class="form-label">Email</label>
+                                <div class="input-with-icon">
+                                    <span class="input-icon">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path
+                                                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                            </path>
+                                            <polyline points="22,6 12,13 2,6"></polyline>
+                                        </svg>
+                                    </span>
+                                    <input type="email" id="contactEmail" name="contactEmail" class="contact-input"
+                                        placeholder="Email Anda" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactMessage" class="form-label">Pesan</label>
+                                <div class="input-with-icon textarea-wrapper">
+                                    <span class="input-icon textarea-icon">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <textarea id="contactMessage" name="contactMessage"
+                                        class="contact-input contact-textarea" rows="4" placeholder="Pesan Anda"
+                                        required></textarea>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn-submit-contact" id="btnSubmitContact">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                                <span>Kirim Pesan</span>
+                            </button>
+                            <div id="contactFormStatus" class="form-status-msg"></div>
+                        </form>
+                    </div>
+
+                    <!-- FIND ME Section (Sesuai Referensi Gambar) -->
+                    <div class="find-me-box">
+                        <h4 class="find-me-label">FIND ME</h4>
+                        <div class="social-cards-list">
+                            <!-- Instagram -->
+                            <a href="https://www.instagram.com/dfaaaajaaa/" target="_blank" rel="noopener noreferrer"
+                                class="social-card-item">
+                                <div class="social-left">
+                                    <div class="social-icon-box instagram-box">
+                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                        </svg>
+                                    </div>
+                                    <div class="social-info">
+                                        <span class="social-title">Instagram</span>
+                                        <span class="social-handle">@dfaaaajaaa</span>
+                                    </div>
+                                </div>
+                                <span class="social-arrow">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                                        <polyline points="7 7 17 7 17 17"></polyline>
+                                    </svg>
+                                </span>
+                            </a>
+
+                            <!-- TikTok -->
+                            <a href="https://www.tiktok.com/@ituaoranga" target="_blank" rel="noopener noreferrer"
+                                class="social-card-item">
+                                <div class="social-left">
+                                    <div class="social-icon-box tiktok-box">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                            <path
+                                                d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .58.04.86.12V9.33a6.33 6.33 0 0 0-.86-.06A6.34 6.34 0 0 0 3 15.61a6.34 6.34 0 0 0 10.74 4.54V10.8a8.28 8.28 0 0 0 4.85 1.55v-3.48a4.83 4.83 0 0 1-1-.18z" />
+                                        </svg>
+                                    </div>
+                                    <div class="social-info">
+                                        <span class="social-title">TikTok</span>
+                                        <span class="social-handle">@ituaoranga</span>
+                                    </div>
+                                </div>
+                                <span class="social-arrow">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                                        <polyline points="7 7 17 7 17 17"></polyline>
+                                    </svg>
+                                </span>
+                            </a>
+
+                            <!-- GitHub -->
+                            <a href="https://github.com/dafaahmad" target="_blank" rel="noopener noreferrer"
+                                class="social-card-item">
+                                <div class="social-left">
+                                    <div class="social-icon-box github-box">
+                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                                        </svg>
+                                    </div>
+                                    <div class="social-info">
+                                        <span class="social-title">GitHub</span>
+                                        <span class="social-handle">@dafaahmad</span>
+                                    </div>
+                                </div>
+                                <span class="social-arrow">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                                        <polyline points="7 7 17 7 17 17"></polyline>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KOLOM KANAN: CARD KOMENTAR & FEED -->
+                <div class="contact-col-right">
+                    <div class="contact-card comments-card">
+                        <!-- Header Komentar -->
+                        <div class="comments-card-header">
+                            <span class="comment-icon-wrap">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </span>
+                            <h3 class="comments-title">Komentar (<span id="commentCounter">1</span>)</h3>
+                        </div>
+
+                        <!-- Form Input Komentar -->
+                        <form id="commentForm" class="comment-form" onsubmit="handleCommentSubmit(event)">
+                            <div class="form-group">
+                                <label for="commentAuthor" class="form-label">Nama</label>
+                                <input type="text" id="commentAuthor" class="contact-input standalone"
+                                    placeholder="Masukkan nama kamu" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="commentBody" class="form-label">Komentar</label>
+                                <textarea id="commentBody" class="contact-input contact-textarea standalone" rows="4"
+                                    placeholder="Tulis komentar kamu di sini..." required></textarea>
+                            </div>
+
+                            <!-- Upload Foto Profil (Opsional) -->
+                            <div class="form-group">
+                                <label class="form-label">Foto Profil (opsional)</label>
+                                <div class="photo-upload-container">
+                                    <input type="file" id="commentAvatarInput" accept="image/*"
+                                        class="file-input-hidden" onchange="previewCommentAvatar(this)">
+                                    <button type="button" class="photo-upload-btn"
+                                        onclick="document.getElementById('commentAvatarInput').click()">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                            <polyline points="21 15 16 10 5 21"></polyline>
+                                        </svg>
+                                        <span>Pilih Foto Profil</span>
+                                    </button>
+                                    <span class="photo-size-limit">Ukuran file maksimal 5 MB</span>
+
+                                    <!-- Preview avatar jika diupload -->
+                                    <div id="avatarPreviewBox" class="avatar-preview-box" style="display: none;">
+                                        <img id="avatarPreviewImg" src="" alt="Avatar Preview"
+                                            class="avatar-preview-thumb">
+                                        <span id="avatarPreviewName" class="avatar-preview-name"></span>
+                                        <button type="button" class="btn-remove-avatar" onclick="removeCommentAvatar()"
+                                            title="Hapus foto">&times;</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn-submit-comment" id="btnSubmitComment">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                                <span>Kirim Komentar</span>
+                            </button>
+                        </form>
+
+                        <div class="comments-divider"></div>
+
+                        <!-- Daftar Komentar (Feed) -->
+                        <div class="comments-list" id="commentsList">
+                            <!-- Dimuat dinamis lewat JavaScript -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Sederhana -->
+    <footer class="footer-simple">
+        <p>&copy; 2026 Dafa Ahmad Naufal Goman. Designed & Built with passion.</p>
+    </footer>
+
+    <!-- Script Navbar Highlight, Tabs & Sambungan About Me -->
+    <script>
+        // 1. Ambil semua link navbar dan section
+        const navLinks = document.querySelectorAll('.nav-links .nav-item');
+        const sections = document.querySelectorAll('main[id], section[id], footer[id]');
+
+        // 2. Klik pada navbar: scroll halus & ubah active highlight langsung
+        navLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if (targetId && targetId.startsWith('#')) {
+                    const targetEl = document.querySelector(targetId);
+                    if (targetEl) {
+                        e.preventDefault();
+                        targetEl.scrollIntoView({ behavior: 'smooth' });
+                        navLinks.forEach(l => l.classList.remove('active'));
+                        this.classList.add('active');
+                    }
+                }
+            });
+        });
+
+        // 3. Scrollspy: Highlight navbar otomatis berubah sesuai posisi scroll
+        window.addEventListener('scroll', () => {
+            let current = 'home';
+            const scrollPosition = window.scrollY + 160;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // 4. Tombol audio di navbar untuk scroll cepat & efek pulse ke Spotify
+        document.querySelector('.audio-btn')?.addEventListener('click', function () {
+            const musicEl = document.getElementById('music-section');
+            if (musicEl) {
+                musicEl.scrollIntoView({ behavior: 'smooth' });
+                musicEl.classList.add('pulse-glow');
+                setTimeout(() => musicEl.classList.remove('pulse-glow'), 1800);
+            }
+        });
+
+        // 5. Portfolio Tab Switching Logic
+        const tabBtns = document.querySelectorAll('.portfolio-tab-btn');
+        const tabPanels = document.querySelectorAll('.portfolio-tab-panel');
+
+        function switchPortfolioTab(tabKey) {
+            tabBtns.forEach(btn => {
+                if (btn.getAttribute('data-tab') === tabKey) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            tabPanels.forEach(panel => {
+                if (panel.id === `panel-${tabKey}`) {
+                    panel.classList.add('active');
+                } else {
+                    panel.classList.remove('active');
+                }
+            });
+        }
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                const tabKey = this.getAttribute('data-tab');
+                switchPortfolioTab(tabKey);
+            });
+        });
+
+        // 6. Sambungkan Kartu About Me langsung ke Portfolio Tabs
+        function goToPortfolioTab(tabName) {
+            const portfolioSection = document.getElementById('portofolio');
+            if (portfolioSection) {
+                portfolioSection.scrollIntoView({ behavior: 'smooth' });
+                switchPortfolioTab(tabName);
+
+                // Efek glow pulse pada container portofolio agar fokus pengguna langsung tertuju
+                portfolioSection.classList.add('pulse-glow');
+                setTimeout(() => portfolioSection.classList.remove('pulse-glow'), 1800);
+            }
+        }
+
+        // Sambungkan kolom Certificates di About Me langsung ke tab Certificates
+        document.getElementById('about-cert-card')?.addEventListener('click', function () {
+            goToPortfolioTab('certificates');
+        });
+
+        // Sambungkan juga kolom Projects & Awards
+        document.getElementById('about-projects-card')?.addEventListener('click', function () {
+            goToPortfolioTab('projects');
+        });
+        document.getElementById('about-awards-card')?.addEventListener('click', function () {
+            goToPortfolioTab('achievements');
+        });
+
+        // 7. Modal Lightbox untuk Sertifikat
+        function openCertModal(imgSrc, caption) {
+            const modal = document.getElementById('certModal');
+            const modalImg = document.getElementById('certModalImg');
+            const modalCaption = document.getElementById('certModalCaption');
+            const modalBody = document.getElementById('certModalBody');
+
+            modalBody.innerHTML = `<img id="certModalImg" src="${imgSrc}" alt="${caption}" class="cert-modal-img">`;
+            modalCaption.textContent = caption;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function openCertDemoModal(courseTitle, issuer, name, track) {
+            const modal = document.getElementById('certModal');
+            const modalCaption = document.getElementById('certModalCaption');
+            const modalBody = document.getElementById('certModalBody');
+
+            modalBody.innerHTML = `
+                <div class="cert-styled-modal-card">
+                    <div class="cert-styled-header">
+                        <span class="brand-udemy">ûdemy</span>
+                        <span class="cert-styled-label">${issuer.toUpperCase()}</span>
+                    </div>
+                    <div class="cert-styled-body">
+                        <h2 style="font-size:24px; color:#111827; margin:16px 0 8px 0; font-weight:800;">${courseTitle}</h2>
+                        <p style="color:#4b5563; font-size:13px;">Bidang: ${track}</p>
+                    </div>
+                    <div class="cert-styled-footer" style="margin-top:20px; border-top:1px solid #e5e7eb; padding-top:14px;">
+                        <span style="font-size:16px; font-weight:700; color:#111827;">Diberikan Kepada: ${name}</span>
+                        <span style="color:#16a34a; font-weight:700;">&#10003; Resmi Terverifikasi</span>
+                    </div>
+                </div>
+            `;
+            modalCaption.textContent = courseTitle;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCertModal(e) {
+            const modal = document.getElementById('certModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Tutup modal dengan tombol Escape
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closeCertModal();
+            }
+        });
+
+        // 8. Contact Form Handling
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            const btn = document.getElementById('btnSubmitContact');
+            const statusMsg = document.getElementById('contactFormStatus');
+            const name = document.getElementById('contactName').value.trim();
+            const email = document.getElementById('contactEmail').value.trim();
+            const message = document.getElementById('contactMessage').value.trim();
+
+            if (!name || !email || !message) return;
+
+            // Efek interaksi pengiriman
+            const originalBtnContent = btn.innerHTML;
+            btn.disabled = true;
+            btn.innerHTML = `
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation: spin 1s linear infinite;">
+                    <circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle>
+                    <path d="M12 2a10 10 0 0 1 10 10"></path>
+                </svg>
+                <span>Mengirim...</span>
+            `;
+
+            setTimeout(() => {
+                btn.disabled = false;
+                btn.innerHTML = originalBtnContent;
+
+                statusMsg.textContent = '✓ Pesan berhasil dikirim! Terima kasih telah menghubungi.';
+                statusMsg.className = 'form-status-msg success';
+                document.getElementById('contactForm').reset();
+
+                setTimeout(() => {
+                    statusMsg.textContent = '';
+                    statusMsg.className = 'form-status-msg';
+                }, 5000);
+            }, 700);
+        }
+
+        // 9. Komentar & Foto Profil Logic
+        let currentUploadedAvatar = null;
+
+        function previewCommentAvatar(input) {
+            if (input.files && input.files[0]) {
+                const file = input.files[0];
+                if (file.size > 5 * 1024 * 1024) {
+                    alert('Ukuran file maksimal 5 MB!');
+                    input.value = '';
+                    return;
+                }
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    currentUploadedAvatar = e.target.result;
+                    document.getElementById('avatarPreviewImg').src = e.target.result;
+                    document.getElementById('avatarPreviewName').textContent = file.name;
+                    document.getElementById('avatarPreviewBox').style.display = 'flex';
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function removeCommentAvatar() {
+            currentUploadedAvatar = null;
+            const input = document.getElementById('commentAvatarInput');
+            if (input) input.value = '';
+            const previewBox = document.getElementById('avatarPreviewBox');
+            if (previewBox) previewBox.style.display = 'none';
+        }
+
+        // Komentar awal bawaan sesuai screenshot referensi
+        const DEFAULT_COMMENTS = [
+            {
+                id: 'default-1',
+                name: 'dfaaaajaaa',
+                time: 'Baru saja',
+                avatar: 'tom.png',
+                text: 'Welcome to My Portofolio'
+            }
+        ];
+
+        function getStoredComments() {
+            try {
+                const stored = localStorage.getItem('dafa_portfolio_comments');
+                if (stored) {
+                    const parsed = JSON.parse(stored);
+                    if (Array.isArray(parsed) && parsed.length > 0) {
+                        return parsed;
+                    }
+                }
+            } catch (err) {
+                console.error(err);
+            }
+            return DEFAULT_COMMENTS;
+        }
+
+        function saveComments(comments) {
+            try {
+                localStorage.setItem('dafa_portfolio_comments', JSON.stringify(comments));
+            } catch (err) {
+                console.error(err);
+            }
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function renderComments() {
+            const comments = getStoredComments();
+            const container = document.getElementById('commentsList');
+            const counter = document.getElementById('commentCounter');
+
+            if (counter) {
+                counter.textContent = comments.length;
+            }
+
+            if (!container) return;
+
+            if (comments.length === 0) {
+                container.innerHTML = `<p class="no-comments">Belum ada komentar. Tulis komentar pertama kamu!</p>`;
+                return;
+            }
+
+            container.innerHTML = comments.map(c => `
+                <div class="comment-item">
+                    <img src="${c.avatar}" alt="${escapeHtml(c.name)}" class="comment-avatar" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'42\\' height=\\'42\\' viewBox=\\'0 0 24 24\\' fill=\\'none\\' stroke=\\'%2338bdf8\\' stroke-width=\\'2\\'><circle cx=\\'12\\' cy=\\'7\\' r=\\'4\\'/><path d=\\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\\'/></svg>'">
+                    <div class="comment-content">
+                        <div class="comment-header-row">
+                            <span class="comment-author">${escapeHtml(c.name)}</span>
+                            <span class="comment-time">${escapeHtml(c.time)}</span>
+                        </div>
+                        <p class="comment-text">${escapeHtml(c.text)}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function handleCommentSubmit(e) {
+            e.preventDefault();
+            const authorInput = document.getElementById('commentAuthor');
+            const bodyInput = document.getElementById('commentBody');
+            const name = authorInput.value.trim();
+            const text = bodyInput.value.trim();
+
+            if (!name || !text) return;
+
+            const avatarSrc = currentUploadedAvatar || `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=0284c7&color=ffffff&bold=true`;
+
+            const newComment = {
+                id: 'comment-' + Date.now(),
+                name: name,
+                time: 'Baru saja',
+                avatar: avatarSrc,
+                text: text
+            };
+
+            const comments = getStoredComments();
+            comments.unshift(newComment);
+            saveComments(comments);
+            renderComments();
+
+            // Reset form
+            authorInput.value = '';
+            bodyInput.value = '';
+            removeCommentAvatar();
+        }
+
+        // Jalankan render komentar saat halaman siap
+        renderComments();
+
+        // 10. Tech Stack Glow Toggle Logic (Menyalakan / Mematikan Cahaya Bersinar Saat Diklik)
+        function toggleTechGlow(item) {
+            // Efek denyut kilatan cahaya seketika saat diklik
+            item.classList.add('just-clicked');
+            setTimeout(() => {
+                item.classList.remove('just-clicked');
+            }, 550);
+
+            // Toggle status bersinar aktif
+            item.classList.toggle('active-glow');
+        }
+
+        // 11. Cyber Loading Screen Logic (Sesuai Tema Web)
+        (function initLoadingScreen() {
+            const loadingScreen = document.getElementById('loadingScreen');
+            const progressBar = document.getElementById('loaderProgressBar');
+            const percentageEl = document.getElementById('loaderPercentage');
+            const statusTextEl = document.getElementById('loaderStatusText');
+
+            if (!loadingScreen || !progressBar || !percentageEl) return;
+
+            document.body.classList.add('loading-active');
+
+            let currentProgress = 0;
+            let pageLoaded = false;
+
+            const statusStages = [
+                { threshold: 22, text: 'Memulai antarmuka sistem...' },
+                { threshold: 48, text: 'Memuat portofolio & aset digital...' },
+                { threshold: 78, text: 'Mengoptimalkan efek visual cyber...' },
+                { threshold: 99, text: 'Menyiapkan pengalaman interaktif...' },
+                { threshold: 100, text: 'Selamat Datang! Siap menjelajah...' }
+            ];
+
+            function updateStatus(val) {
+                for (let i = 0; i < statusStages.length; i++) {
+                    if (val <= statusStages[i].threshold || i === statusStages.length - 1) {
+                        if (statusTextEl && statusTextEl.textContent !== statusStages[i].text) {
+                            statusTextEl.textContent = statusStages[i].text;
+                        }
+                        break;
+                    }
+                }
+            }
+
+            // Interval pengisian progress bar bertahap
+            const progressInterval = setInterval(() => {
+                const maxStep = pageLoaded ? 100 : 88;
+
+                if (currentProgress < maxStep) {
+                    const increment = pageLoaded ? Math.floor(Math.random() * 8) + 4 : Math.floor(Math.random() * 4) + 2;
+                    currentProgress = Math.min(currentProgress + increment, maxStep);
+
+                    progressBar.style.width = currentProgress + '%';
+                    percentageEl.textContent = currentProgress + '%';
+                    updateStatus(currentProgress);
+                }
+
+                if (currentProgress >= 100) {
+                    clearInterval(progressInterval);
+                    finishLoading();
+                }
+            }, 40);
+
+            // Deteksi ketika dokumen dan aset selesai dimuat
+            window.addEventListener('load', () => {
+                pageLoaded = true;
+            });
+
+            // Batas pengaman waktu maksimal (maksimal 1.8 detik jika internet lambat)
+            setTimeout(() => {
+                pageLoaded = true;
+            }, 1800);
+
+            function finishLoading() {
+                updateStatus(100);
+                progressBar.style.width = '100%';
+                percentageEl.textContent = '100%';
+
+                setTimeout(() => {
+                    loadingScreen.classList.add('fade-out');
+                    document.body.classList.remove('loading-active');
+
+                    setTimeout(() => {
+                        loadingScreen.style.display = 'none';
+                    }, 800);
+                }, 280);
+            }
+        })();
+    </script>
+
+</body>
+
+</html>
