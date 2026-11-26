@@ -1027,10 +1027,11 @@ body {
     }
 }
 
-/* 1. Grid Sertifikat (3 Kolom persis seperti di gambar) */
+/* 1. Grid Sertifikat (Fleksibel & Terpusat Rapi) */
 .certificates-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(320px, 440px));
+    justify-content: center;
     gap: 26px;
     width: 100%;
 }
